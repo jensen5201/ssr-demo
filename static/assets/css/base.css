@@ -1,0 +1,24 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .base-wrapper {
+      width: 100%;
+      display: flex;
+      min-width: 1200px;
+      flex-direction: column;
+    }
+    .base-header {
+      height: 20vh;
+      background: #244;
+    }
+    .base-content {
+      flex: 1;
+      margin-top: 20vh;
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .base-footer {
+      height: 10vh;
+      background: rgb(150, 147, 147);
+    }

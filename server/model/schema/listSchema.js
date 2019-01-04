@@ -14,7 +14,7 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.CHAR(128),
       allowNull: false
     },
-    datails: {
+    detail: {
       type: DataTypes.CHAR(255),
       allowNull: false
     },
@@ -24,6 +24,10 @@ export default (sequelize, DataTypes) => {
     },
     updateAt: {
       type: DataTypes.DATE,
+      allowNull: false
+    },
+    creater: {
+      type: DataTypes.CHAR(50),
       allowNull: false
     }
   }, {

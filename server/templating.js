@@ -6,7 +6,7 @@ const createEnv = (path, opts) => {
   let watch = opts.watch || false
   let throwOnUndefined = opts.throwOnUndefined || false
   let env = new nunjucks.Environment(
-    new nunjucks.FileSystemLoader(path || 'views', {
+    new nunjucks.FileSystemLoader(path || 'views-nunjucks', {
       noCache: noCache,
       watch: watch
     }),
@@ -27,6 +27,7 @@ const templating = (path, opts) => {
   let env = createEnv(path, opts)
   return async (ctx, next) => {
     ctx.render = (view, model) => {
+      // console.log('model', model)
       ctx.response.body = env.render(
         view,
         Object.assign({}, ctx.state || {}, model || {})

@@ -4,7 +4,8 @@ require('babel-core/register')({
       'env',
       {
         targets: {
-          node: 'current'
+          node: true,
+          browsers: ['> 1%', 'last 2 versions', 'not ie <= 8']
         }
       }
     ]
